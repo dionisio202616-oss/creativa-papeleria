@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativa Papelería</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <h1>CREATIVA PAPELERÍA</h1>
+        <p>Todo lo que necesitas para estudiar y trabajar</p>
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#productos">Productos</a>
+        <a href="#promociones">Promociones</a>
+        <a href="#carrito">Carrito 🛒 (<span id="contador">0</span>)</a>
+        <a href="#pagos">Pagos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section id="inicio" class="portada">
+    <div>
+        <h2>Bienvenidos a Creativa Papelería</h2>
+        <p>Encuentra útiles escolares, artículos de oficina
+        y todo lo necesario para desarrollar tus ideas.</p>
+        <a href="#productos" class="boton">EXPLORAR PRODUCTOS</a>
+    </div>
+</section>
+
+<section id="nosotros">
+    <h2>ACERCA DE NOSOTROS</h2>
+
+    <div class="nosotros-grid">
+        <article>
+            <h3>Nuestra historia</h3>
+            <p>Creativa Papelería nace como una propuesta de
+            emprendimiento digital dedicada a la venta de útiles
+            escolares y artículos de oficina. Nuestro propósito
+            es facilitar las compras mediante una tienda virtual
+            moderna, accesible y organizada.</p>
+        </article>
+
+        <article>
+            <h3>Nuestra misión</h3>
+            <p>Ofrecer productos escolares y de oficina de calidad,
+            a precios accesibles, brindando una atención amable
+            y una experiencia de compra cómoda y segura.</p>
+        </article>
+
+        <article>
+            <h3>Nuestra visión</h3>
+            <p>Ser una papelería virtual reconocida en Panamá
+            por nuestra variedad de productos, creatividad,
+            calidad y buen servicio.</p>
+        </article>
+
+        <article>
+            <h3>Descripción del negocio</h3>
+            <p>Somos una tienda online que ofrece libretas,
+            bolígrafos, mochilas, cartucheras, agendas,
+            útiles escolares y artículos de oficina para
+            estudiantes, docentes y profesionales.</p>
+        </article>
+    </div>
+</section>
+
+<section id="productos">
+    <h2>NUESTRO CATÁLOGO</h2>
+
+    <div class="catalogo">
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=500" alt="Libreta">
+            <h3>Libreta decorativa</h3>
+            <p>Ideal para apuntes y estudios.</p>
+            <strong>$4.50</strong>
+            <button onclick="agregar('Libreta decorativa',4.50)">
+                Agregar al carrito
+            </button>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500" alt="Bolígrafos">
+            <h3>Bolígrafos de colores</h3>
+            <p>Set de escritura para tus actividades.</p>
+            <strong>$3.00</strong>
+            <button onclick="agregar('Bolígrafos de colores',3)">
+                Agregar al carrito
+            </button>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" alt="Mochila">
+            <h3>Mochila escolar</h3>
+            <p>Espaciosa y práctica para estudiantes.</p>
+            <strong>$18.00</strong>
+            <button onclick="agregar('Mochila escolar',18)">
+                Agregar al carrito
+            </button>
+        </article>
+
+        <article class="producto">
+            <img src="https://images.unsplash.com/photo-1585336261022-680e295ce3fe?w=500" alt="Cartuchera">
+            <h3>Cartuchera</h3>
+            <p>Perfecta para guardar tus útiles.</p>
+            <strong>$5.00</strong>
+            <button onclick="agregar('Cartuchera',5)">
+                Agregar al carrito
+            </button>
+        </article>
+
+    </div>
+</section>
+
+<section id="promociones" class="promociones">
+    <h2>PROMOCIONES ESPECIALES</h2>
+    <div class="promo">
+        <h3>10% DE DESCUENTO</h3>
+        <p>En la compra de libretas seleccionadas.</p>
+        <h3>PAQUETE ESCOLAR</h3>
+        <p>Libretas, bolígrafos y cartuchera en una sola oferta.</p>
+    </div>
+</section>
+
+<section id="carrito">
+    <h2>CARRITO DE COMPRAS</h2>
+    <div id="lista-carrito"></div>
+    <h3>Total: $<span id="total">0.00</span></h3>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+    <button onclick="finalizarCompra()">Finalizar pedido</button>
+    <p id="mensaje-pedido"></p>
+</section>
+
+<section id="pagos">
+    <h2>MÉTODOS DE PAGO</h2>
+    <div class="pagos-grid">
+        <article>
+            <h3>Yappy</h3>
+            <p>Pago mediante coordinación con el cliente.</p>
+        </article>
+        <article>
+            <h3>Transferencia bancaria</h3>
+            <p>Transferencias a una cuenta autorizada.</p>
+        </article>
+        <article>
+            <h3>Efectivo</h3>
+            <p>Pago contra entrega, según disponibilidad.</p>
+        </article>
+    </div>
+    <p class="nota">Métodos propuestos para el proyecto académico.
+    Los pagos reales requieren configuración y verificación.</p>
+</section>
+
+<section id="contacto">
+    <h2>CONTÁCTANOS</h2>
+    <p>Correo: dionisio202616@gmail.com</p>
+    <p>Teléfono: 63356301</p>
+    <p>Ubicación: CALABAZAL</p>
+    <p>Redes sociales: Facebook, Instagram y WhatsApp.</p>
+</section>
+
+<footer>
+    <h3>CREATIVA PAPELERÍA</h3>
+    <p>Proyecto final de comercio electronico</p>
+    <p>dionisio202616©gmail.com Todos los derechos reservados.</p>
+</footer>
+
+<script src="carrito.js"></script>
+
+</body>
+</html>
